@@ -1,0 +1,18 @@
+.navDrop {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.navDrop.open {
+    max-height: 33vh;
+    display: flex !important;
+    flex-direction: column;
+}
+@media screen and (min-width: 780px) {
+  .navDrop.open {
+    display: none !important;
+    max-height: none !important;
+  }
+}
+
