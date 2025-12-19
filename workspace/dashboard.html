@@ -3,10 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rean2Learn - Dashboard</title>
     <link rel="icon" href="assets/img/Rean2LearnLogo.png">
+    <title>Rean2Learn | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            /* Global */
+            --color-buttonColor: #0066FF;
+                /* Mobile */
+                --breakpoint-mobile: 475px;
+                --breakpoint-md: 628px;
+                --breakpoint-lg: 1024px;
+                    /* text-size */
+                    --text-mobileL: 35px;
+                    --text-mobileSL: 22px;
+                    --text-mobileM: 18px;
+                    --text-mobileMS: 20px;
+                    --text-mobileS: 15px;
+
+                    /* text-color */
+                    --color-grey: #CDCDCD;
+                    --color-darkgrey: #545454;
+                    --color-lightgrey: #F2F2F2;
+
+                    /* Padding */
+                    --spacing-mobilePadx: 15px;
+                    --spacing-mobilePady: 5px;
+        }
+    </style>
 </head>
 <body>
-    <script src="js/dashboard.js"></script>
+    
+
+  <!-- Overlay
+  <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-[2000] lg:hidden">
+  </div> -->
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="fixed top-0 left-0 h-screen w-[268px] bg-white border-r z-[2500] transform -translate-x-full transition-transform duration-300 lg:translate-x-0 lg:block">
+    <section class="py-[30px] px-[10px]">
+      <div class="flex gap-3">
+        <img src="../assets/img/Rean2LearnLogo.png" class="w-8 h-8">
+        <h4 class="font-bold self-center">Rean2Learn</h4>
+      </div>
+    </section>
+    <h4 class="px-[8px]">Main Menu</h4>
+    <section class="flex flex-col">
+      <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
+        <img src="../assets/Icons/dashboard.svg">
+        <h4>Dashboard</h4>
+      </div>
+      <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
+        <img src="../assets/Icons/Task2.svg">
+        <h4>Task Management</h4>
+      </div>
+      <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
+        <img src="../assets/Icons/FocusArea.svg">
+        <h4>Focus Area</h4>
+      </div>
+    </section>
+    <h4 class="px-[8px]">Mini Menu</h4>
+    <section class="flex flex-col">
+      <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
+        <img src="../assets/Icons/music2.svg">
+        <h4>Music</h4>
+      </div>
+      <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
+        <img src="../assets/Icons/game.svg">
+        <h4>Game</h4>
+      </div>
+    </section>
+    <section class="mt-auto px-[25px]">
+      <div class="flex py-[8px] hover:bg-lightgrey cursor-pointer gap-2">
+        <img src="../assets/Icons/setting.svg">
+        <h4>Setting</h4>
+      </div>
+    </section>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="md:z-[2000] sm:z-[2000] lg:ml-[268px] bg-[#FDFDFD] lg:px-[50px] lg:py-[20px] px-[30px] py-[30px]">
+    <!-- TOP -->
+    <section class="flex flex-row justify-between py-[10px]">
+      <img id="menu" src="../assets/Icons/HamburgerBlack.svg" alt="Menu" class="lg:hidden cursor-pointer"/>
+      <h1 class="mr-auto text-xl font-bold text-center flex self-center ml-[20px] lg:ml-0">My Task</h1>
+      <div class="flex flex-row">
+        <button class="bg-black text-white text-center px-[25px] py-[6px] rounded-[30px] cursor-pointer">Add Task</button>
+      </div>
+    </section>
+    <!-- Description -->
+    <section class="hidden md:flex lg:flex lg:flex-row bg-white px-[50px] rounded-[8px] mt-6 shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)]">
+        <div class="flex flex-col w-[70%] self-center justify-center mr-8">
+            <img src="../assets/Icons/Task.svg" alt="" class="w-6 h-6">
+            <h4 class="font-bold">Make Your Study Tasks Manageable</h4>
+            <h6 class="text-darkgrey">Break your workload into small, manageable actions and keep every task organized in one simple dashboard designed to reduce stress and boost productivity.</h6>
+        </div>
+        <img src="../assets/img/TaskManagement IMG.jpg" alt="" class="w-full md:w-[30%] lg:w-[26%] h-[230px]">
+    </section>
+    <!-- Task list -->
+    <section class="grid grid-cols-1 shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] bg-white lg:px-[50px] lg:py-[80px] rounded-[8px] mt-6 gap-3 rounded-[12px] md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 ">
+        <!-- Tasks -->
+        <div class="px-[35px] py-[40px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] cursor-pointer rounded-[12px]">
+          <!-- Title -->
+          <div>
+              <h4 class="font-semibold text-mobileSL">Web Design</h4>
+              <div class="flex flex-row text-darkgrey gap-10 text-[12px] font-semibold">
+                  <h6>TOTAL TASK</h6>
+                  <h6>TASK DONE</h6>
+              </div>
+          </div>
+          <!-- Img -->
+          <img src="../assets/img/HTML Logo.jpg" alt="" class="mt-2 mb-2">
+          <!-- short descriptiotn -->
+          <h6 class="text-darkgrey text-[12px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </h6>
+        </div>
+    </section>
+  </main>
+  <script src="../js/script.js"></script>
 </body>
+
 </html>
