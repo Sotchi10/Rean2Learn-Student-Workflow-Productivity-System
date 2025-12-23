@@ -1,273 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rean2Learn | Student Workflow & Productivity System</title>
-    <link rel="icon" href="assets/img/Rean2LearnLogo.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/Rean2LearnLogo.png" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
-            /* Global */
-            --color-buttonColor: #0066FF;
-                /* Mobile */
-                --breakpoint-mobile: 475px;
-                --breakpoint-tablet: 768px;
-                --breakpoint-desktop: 1024px;
-                    /* text-size */
-                    --text-mobileL: 35px;
-                    --text-mobileSL: 22px;
-                    --text-mobileM: 18px;
-                    --text-mobileMS: 20px;
-                    --text-mobileS: 15px;
+        /* Global */
+        --color-buttonColor: #0066ff;
+        /* Mobile */
+        --breakpoint-mobile: 475px;
+        --breakpoint-tablet: 768px;
+        --breakpoint-desktop: 1024px;
+        /* text-size */
+        --text-mobileL: 35px;
+        --text-mobileSL: 22px;
+        --text-mobileM: 18px;
+        --text-mobileMS: 20px;
+        --text-mobileS: 15px;
 
-                    /* text-color */
-                    --color-grey: #CDCDCD;
-                    --color-darkgrey: #545454;
-                    --color-lightgrey: #F2F2F2;
+        /* text-color */
+        --color-grey: #cdcdcd;
+        --color-darkgrey: #545454;
+        --color-lightgrey: #f2f2f2;
 
-                    /* Padding */
-                    --spacing-mobilePadx: 15px;
-                    --spacing-mobilePady: 5px;
+        /* Padding */
+        --spacing-mobilePadx: 15px;
+        --spacing-mobilePady: 5px;
 
-
-
-
-                /* Tablet */
-                /* Desktop */
-        }
+        /* Tablet */
+        /* Desktop */
+      }
     </style>
 </head>
+
 <body>
     <!--Navigation Bar-->
-        <!--Mobile-->
-        <nav class="bg-white flex flex-row justify-between w-full h-[60px] fixed top-0 left-0 items-center border-b-1 z-1000 justify-between lg:hidden px-[20px]">
-            <a href="index.html" class="flex flex-row h-[30px] w-[30px]">
-                <img src="assets/img/Rean2LearnLogo.png" alt="Rean2LearnLogo" class="cursor-pointer">
-            </a>
-            <div class="flex flex-row w-[50%] justify-between items-center gap-2">
-                <button class="px-mobilePadx py-mobilePady bg-buttonColor rounded-[8px] text-white ml-auto">Get Started</button>
-                <img src="assets/Icons/HamburgerBlack.svg" alt="Hamburger" class="hamburger w-[35px] h-[30px] cursor-pointer">
-            </div>
-        </nav>
-        <!-- Navigation Links Drop -->
-        <div class="navDrop fixed bg-white h-[40vh] w-screen left-0 top-[8%] z-1000 md:hidden">
-            <ul class="flex flex-col p-[20px] justify-self-center w-full">
-                <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]"><a href="#">Rean2Learn</a></li>
-                <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]"><a href="#">Contact</a></li>
-                <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]"><a href="#">Features</a></li>
-                <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]"><a href="#">Explore</a></li>
-                <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]"><a href="workspace/dashboard.html">Workspace</a></li>
-                <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]"><a href="#">Watach a Demo</a></li>
-            </ul>
-            <div class="w-full flex flex-row justify-between">
-                <button class="w-[48%] px-4 py-1 cursor-pointer">Log in</button>
-                <button class="w-[48%] px-4 py-1 cursor-pointer">Sign up</button>
-            </div>
+    <!--Mobile-->
+    <nav
+        class="bg-white flex flex-row justify-between w-full h-[60px] fixed top-0 left-0 items-center border-b-1 z-1000 justify-between lg:hidden px-[20px]">
+        <a href="index.html" class="flex flex-row h-[30px] w-[30px]">
+            <img src="assets/img/Rean2LearnLogo.png" alt="Rean2LearnLogo" class="cursor-pointer" />
+        </a>
+        <div class="flex flex-row w-[50%] justify-between items-center gap-2">
+            <button class="px-mobilePadx py-mobilePady bg-buttonColor rounded-[8px] text-white ml-auto">
+                Get Started
+            </button>
+            <img src="assets/Icons/HamburgerBlack.svg" alt="Hamburger"
+                class="hamburger w-[35px] h-[30px] cursor-pointer" />
         </div>
-        <!--Desktop-->
-        <nav class="hidden w-full h-[60px] fixed top-0 left-0 flex flex-row items-center justify-center z-1000 bg-white md:grid md:grid-cols-3">
-            <!-- LEFT-->
-            <div class="pl-5 flex items-center">
-                <img src="assets/img/Rean2LearnLogo.png" class="h-8 w-8 cursor-pointer">
-            </div>
-            <!-- CENTER-->
-            <ul class="flex justify-center gap-6">
-                <li><a href="#" class="hover:bg-lightgrey">Rean2Learn</a></li>
-                <li><a href="#" class="hover:bg-lightgrey">Contact</a></li>
-                <li><a href="#" class="hover:bg-lightgrey">Features</a></li>
-                <li><a href="#" class="hover:bg-lightgrey">Explore</a></li>
-                <li><a href="workspace/dashboard.html" class="hover:bg-lightgrey">Workspace</a></li>
-                <li><a href="#" class="hover:bg-lightgrey">Demo</a></li>
-            </ul>
-            <!-- RIGHT-->
-            <div class="pr-5 flex items-center justify-end gap-3">
-                <button class="cursor-pointer">Log in</button>
-                <button class="bg-[#0066FF] text-white rounded-xl px-4 py-2 cursor-pointer">Sign up</button>
-            </div>
-        </nav>
-        <main class="px-[50px] desktop:px-[100px] w-full tablet:w-full desktop:w-full">
-            <!-- Hero-Section -->
-            <section class="w-full tablet:w-full desktop:w-full flex flex-col justify-center items-center">
-                <img src="assets/img/Illustration.jpg" alt="Illustration" class="mt-[80px] w-[90%] desktop:w-[60%] desktop:h-[300px]">
-                <div class="mt-auto">
-                    <h1 class="text-center text-mobileL leading-[1.2] font-bold desktop:text-[3rem]">Discover what to do, <br> When to do it.</h1>
-                    <p class="text-center text-[16px] text-darkgrey desktop:text-[22px]">Organize your tasks, discover what to focus on <br> first, make decisions easier, and track your achievements</p>
-                    <div class="flex flex-row justify-evenly mt-4 justify-self-center gap-3">
-                        <button class="bg-buttonColor text-white px-mobilePadx py-mobilePady rounded-lg cursor-pointer desktop:px-[30px] desktop:py-[12px]">
-                            Get Started
-                        </button>
-                        <button class="bg-white text-buttonColor px-mobilePadx py-mobilePady rounded-lg border border-buttonColor cursor-pointer desktop:px-[30px] desktop:py-[12px]">
-                            Watch a Demo
-                        </button>
-                    </div>
+    </nav>
+    <!-- Navigation Links Drop -->
+    <div class="navDrop fixed bg-white h-[40vh] w-screen left-0 top-[8%] z-1000 md:hidden">
+        <ul class="flex flex-col p-[20px] justify-self-center w-full">
+            <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
+                <a href="#">Rean2Learn</a>
+            </li>
+            <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
+                <a href="#">Contact</a>
+            </li>
+            <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
+                <a href="#">Features</a>
+            </li>
+            <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
+                <a href="#">Explore</a>
+            </li>
+            <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
+                <a href="workspace/taskmanager.html">Workspace</a>
+            </li>
+            <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
+                <a href="#">Watach a Demo</a>
+            </li>
+        </ul>
+        <div class="w-full flex flex-row justify-between">
+            <button class="w-[48%] px-4 py-1 cursor-pointer">Log in</button>
+            <button class="w-[48%] px-4 py-1 cursor-pointer">Sign up</button>
+        </div>
+    </div>
+    <!--Desktop-->
+    <nav
+        class="hidden w-full h-[60px] fixed top-0 left-0 flex flex-row items-center justify-center z-1000 bg-white md:grid md:grid-cols-3">
+        <!-- LEFT-->
+        <div class="pl-5 flex items-center">
+            <img src="assets/img/Rean2LearnLogo.png" class="h-8 w-8 cursor-pointer" />
+        </div>
+        <!-- CENTER-->
+        <ul class="flex justify-center gap-6">
+            <li><a href="#" class="hover:bg-lightgrey">Rean2Learn</a></li>
+            <li><a href="#" class="hover:bg-lightgrey">Contact</a></li>
+            <li><a href="#" class="hover:bg-lightgrey">Features</a></li>
+            <li><a href="#" class="hover:bg-lightgrey">Explore</a></li>
+            <li>
+                <a href="workspace/taskmanager.html" class="hover:bg-lightgrey">Workspace</a>
+            </li>
+            <li><a href="#" class="hover:bg-lightgrey">Demo</a></li>
+        </ul>
+        <!-- RIGHT-->
+        <div class="pr-5 flex items-center justify-end gap-3">
+            <button class="cursor-pointer">Log in</button>
+            <button class="bg-[#0066FF] text-white rounded-xl px-4 py-2 cursor-pointer">
+                Sign up
+            </button>
+        </div>
+    </nav>
+    <main class="px-[50px] desktop:px-[100px] w-full tablet:w-full desktop:w-full">
+        <!-- Hero-Section -->
+        <section class="w-full tablet:w-full desktop:w-full flex flex-col justify-center items-center">
+            <img src="assets/img/Illustration.jpg" alt="Illustration"
+                class="mt-[80px] w-[90%] desktop:w-[60%] desktop:h-[300px]" />
+            <div class="mt-auto">
+                <h1 class="text-center text-mobileL leading-[1.2] font-bold desktop:text-[3rem]">
+                    Discover what to do, <br />
+                    When to do it.
+                </h1>
+                <p class="text-center text-[16px] text-darkgrey desktop:text-[22px]">
+                    Organize your tasks, discover what to focus on <br />
+                    first, make decisions easier, and track your achievements
+                </p>
+                <div class="flex flex-row justify-evenly mt-4 justify-self-center gap-3">
+                    <button
+                        class="bg-buttonColor text-white px-mobilePadx py-mobilePady rounded-lg cursor-pointer desktop:px-[30px] desktop:py-[12px]">
+                        Get Started
+                    </button>
+                    <button
+                        class="bg-white text-buttonColor px-mobilePadx py-mobilePady rounded-lg border border-buttonColor cursor-pointer desktop:px-[30px] desktop:py-[12px]">
+                        Watch a Demo
+                    </button>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Introduce Feature -->
-            <section class="w-full tablet:w-full desktop:w-full mt-[10px]">
-                <h2 class="text-mobileSL mt-[50px] font-bold desktop:text-[1.7rem]">Introducing Rean2Learn's Features</h2>
-                <!-- Feature -->
-                <div class="flex flex-col gap-6 desktop:grid desktop:grid-cols-2">
-                    <!-- Feature1 -->
-                    <div class="w-full shadow-[0_4px_16px_rgba(0,0,0,0.08)] p-[30px]  rounded-[20px]">
-                        <div>
-                            <div class="flex flex-row gap-2">
-                                <h4 class="text-mobileS text-darkgrey font-semibold">Task Management</h4>
-                                <img src="assets/Icons/Task.svg" alt="Task Management">
-                            </div>
-                            <h3 class="text-mobileM font-bold mb-[10px]">Add tasks for each Subjects</h3>
+        <!-- Introduce Feature -->
+        <section class="w-full tablet:w-full desktop:w-full mt-[10px]">
+            <h2 class="text-mobileSL mt-[50px] font-bold desktop:text-[1.7rem]">
+                Introducing Rean2Learn's Features
+            </h2>
+            <!-- Feature -->
+            <div class="flex flex-col gap-6 desktop:grid desktop:grid-cols-2">
+                <!-- Feature1 -->
+                <div class="w-full shadow-[0_4px_16px_rgba(0,0,0,0.08)] p-[30px] rounded-[20px]">
+                    <div>
+                        <div class="flex flex-row gap-2">
+                            <h4 class="text-mobileS text-darkgrey font-semibold">
+                                Task Management
+                            </h4>
+                            <img src="assets/Icons/Task.svg" alt="Task Management" />
                         </div>
-                        <img src="assets/img/Features/Screenshot 2025-12-08 122620.png" alt="">
+                        <h3 class="text-mobileM font-bold mb-[10px]">
+                            Add tasks for each Subjects
+                        </h3>
                     </div>
-                    <!-- Feature2 -->
-                    <div class="w-full shadow-[0_4px_16px_rgba(0,0,0,0.08)] p-[30px]  rounded-[20px]">
-                        <div>
-                            <div class="flex flex-row gap-2">
-                                <h4 class="text-mobileS text-darkgrey font-semibold">Pomodoro Timer</h4>
-                                <img src="assets/Icons/Timer.svg" alt="Timer">
-                            </div>
-                            <h3 class="text-mobileM font-bold mb-[10px]">Add tasks for each Subjects</h3>
+                    <img src="assets/img/Features/Screenshot 2025-12-08 122620.png" alt="" />
+                </div>
+                <!-- Feature2 -->
+                <div class="w-full shadow-[0_4px_16px_rgba(0,0,0,0.08)] p-[30px] rounded-[20px]">
+                    <div>
+                        <div class="flex flex-row gap-2">
+                            <h4 class="text-mobileS text-darkgrey font-semibold">
+                                Pomodoro Timer
+                            </h4>
+                            <img src="assets/Icons/Timer.svg" alt="Timer" />
                         </div>
-                        <img src="assets/img/Features/Screenshot 2025-12-08 122620.png" alt="">
+                        <h3 class="text-mobileM font-bold mb-[10px]">
+                            Add tasks for each Subjects
+                        </h3>
                     </div>
+                    <img src="assets/img/Features/Screenshot 2025-12-08 122620.png" alt="" />
                 </div>
-                <!-- Feature3 -->
-                <div class="w-full h-[180px] flex flex-col justify-center items-center text-center">
-                    <h4 class="text-mobileS">Quote Generator</h4>
-                    <h5 class="text-mobileS">Lorem</h5>
-                    <h5 class="text-mobileS">Name</h5>
-                </div>
+            </div>
+            <!-- Feature3 -->
+            <div class="w-full h-[180px] flex flex-col justify-center items-center text-center">
+                <h4 class="text-mobileS">Quote Generator</h4>
+                <h5 class="text-mobileS">Lorem</h5>
+                <h5 class="text-mobileS">Name</h5>
+            </div>
             <!-- Unique Feature -->
-            <h2 class="text-mobileSL font-bold desktop:text-[1.7rem]">Unique Feature</h2>
-                <div class="flex flex-col">
-                    <!-- Feature4 -->
-                    <div class="flex flex-col mt-[15px] tablet:w-full tablet:h-full tablet:grid tablet:grid-cols-2">
-                        <img src="" alt="" class="h-[260px] w-full">
-                        <div class="flex flex-col tablet:justify-self-center desktop:px-[40px]">
-                            <div>
-                                <img src="assets/Icons/music2.svg" alt="" class="h-[30px] flex self-start-safe justify-self-start">
-                                <h5 class="font-semibold text-mobileM">Music Playlist</h5>
-                            </div>
-                            <h6>Create your perfect study soundtrack. Customize playlists to boost focus, block distractions, and make every study session more productive and enjoyable.</h6>
+            <h2 class="text-mobileSL font-bold desktop:text-[1.7rem]">
+                Unique Feature
+            </h2>
+            <div class="flex flex-col">
+                <!-- Feature4 -->
+                <div class="flex flex-col mt-[15px] tablet:w-full tablet:h-full tablet:grid tablet:grid-cols-2">
+                    <img src="" alt="" class="h-[260px] w-full" />
+                    <div class="flex flex-col tablet:justify-self-center desktop:px-[40px]">
+                        <div>
+                            <img src="assets/Icons/music2.svg" alt=""
+                                class="h-[30px] flex self-start-safe justify-self-start" />
+                            <h5 class="font-semibold text-mobileM">Music Playlist</h5>
                         </div>
+                        <h6>
+                            Create your perfect study soundtrack. Customize playlists to
+                            boost focus, block distractions, and make every study session
+                            more productive and enjoyable.
+                        </h6>
                     </div>
-                    
                 </div>
-            </section>
-            <!-- Usage -->
-            <h2 class="text-mobileSL font-semibold text-center w-full mt-[60px] mb-[30px] desktop:text-[2rem]">Why People are using Rean2Learn</h2>
-            <section class="w-full flex flex-col items-center mb-[50px] desktop:grid desktop:grid-cols-3">
-                <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
-                    <div class="flex flex-row justify-center">
-                        <img src="assets/Icons/music2.svg" alt="" class="h-[30px] flex self-start-safe justify-self-start">
-                        <h5 class="font-medium text-mobileM desktop:text-[20px]">Organize your study plan</h5>
-                    </div>
-                    <h6 class="text-start px-[30px] text-darkgrey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</h6>
+            </div>
+        </section>
+        <!-- Usage -->
+        <h2 class="text-mobileSL font-semibold text-center w-full mt-[60px] mb-[30px] desktop:text-[2rem]">
+            Why People are using Rean2Learn
+        </h2>
+        <section class="w-full flex flex-col items-center mb-[50px] desktop:grid desktop:grid-cols-3">
+            <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
+                <div class="flex flex-row justify-center">
+                    <img src="assets/Icons/music2.svg" alt=""
+                        class="h-[30px] flex self-start-safe justify-self-start" />
+                    <h5 class="font-medium text-mobileM desktop:text-[20px]">
+                        Organize your study plan
+                    </h5>
                 </div>
-                <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
-                    <div class="flex flex-row justify-center">
-                        <img src="assets/Icons/music2.svg" alt="" class="h-[30px] flex self-start-safe justify-self-start">
-                        <h5 class="font-medium text-mobileM desktop:text-[20px]">Organize your study plan</h5>
-                    </div>
-                    <h6 class="text-start px-[30px] text-darkgrey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</h6>
+                <h6 class="text-start px-[30px] text-darkgrey">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy
+                </h6>
+            </div>
+            <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
+                <div class="flex flex-row justify-center">
+                    <img src="assets/Icons/music2.svg" alt=""
+                        class="h-[30px] flex self-start-safe justify-self-start" />
+                    <h5 class="font-medium text-mobileM desktop:text-[20px]">
+                        Organize your study plan
+                    </h5>
                 </div>
-                <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
-                    <div class="flex flex-row justify-center">
-                        <img src="assets/Icons/music2.svg" alt="" class="h-[30px] flex self-start-safe justify-self-start">
-                        <h5 class="font-medium text-mobileM desktop:text-[20px]">Organize your study plan</h5>
-                    </div>
-                    <h6 class="text-start px-[30px] text-darkgrey">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</h6>
+                <h6 class="text-start px-[30px] text-darkgrey">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy
+                </h6>
+            </div>
+            <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
+                <div class="flex flex-row justify-center">
+                    <img src="assets/Icons/music2.svg" alt=""
+                        class="h-[30px] flex self-start-safe justify-self-start" />
+                    <h5 class="font-medium text-mobileM desktop:text-[20px]">
+                        Organize your study plan
+                    </h5>
                 </div>
-            </section>
-            <!-- Contact -->
-            <section class="w-full flex flex-col items-center desktop:grid desktop:grid-cols-2 desktop:mb-[60px] desktop:h-[750px]">
-                <!-- Info -->
-                <div class="flex flex-col justify-center items-center p-[60px]">
-                    <h2 class="text-mobileL w-full text-center desktop:text-start  desktop:text-[45px]"> <strong class="text-buttonColor">State</strong> Your Problems or Feedback</h2>
-                    <h3 class="text-[16px] text-center desktop:text-start desktop:text-[18px] desktop:pr-[60px]">We value your feedback to enhance our platform’s quality and user experience.</h3>
-                    <div class="w-full desktop:mt-[20px]">
-                        <a href="#" class="flex flex-row w-full p-[10px] gap-4 items-center hover:bg-[#CDCDCD] cursor-pointer">
-                            <img src="assets/Icons/Email.svg" alt="E-mail" class="h-8 w-8 desktop:h-12 desktop:w-12">
-                            <div class="flex flex-col text-[#545454]">
-                                <h6 class="text-[13px] font-medium desktop:text-[15px]">E-mail</h6>
-                                <h6 class="text-[13px] font-medium desktop:text-[15px]">rean2learn.service@gmail.com</h6>
-                            </div>
-                        </a>
-                        <a href="#" class="flex flex-row w-full p-[10px] gap-4 items-center hover:bg-[#CDCDCD] cursor-pointer"> 
-                            <img src="assets/Icons/phone.svg" alt="E-mail" class="h-8 w-8 desktop:h-12 desktop:w-12">
-                            <div class="flex flex-col text-[#545454]">
-                                <h6 class="text-[13px] font-medium desktop:text-[15px]">Phone Number</h6>
-                                <h6 class="text-[13px] font-medium desktop:text-[15px]">(+855) 67 168 169</h6>
-                            </div>
-                        </a>
-                    </div>
-                    
+                <h6 class="text-start px-[30px] text-darkgrey">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy
+                </h6>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section
+            class="w-full flex flex-col items-center desktop:grid desktop:grid-cols-2 desktop:mb-[60px] desktop:h-[750px]">
+            <!-- Info -->
+            <div class="flex flex-col justify-center items-center p-[60px]">
+                <h2 class="text-mobileL w-full text-center desktop:text-start desktop:text-[45px]">
+                    <strong class="text-buttonColor">State</strong> Your Problems or
+                    Feedback
+                </h2>
+                <h3 class="text-[16px] text-center desktop:text-start desktop:text-[18px] desktop:pr-[60px]">
+                    We value your feedback to enhance our platform’s quality and user
+                    experience.
+                </h3>
+                <div class="w-full desktop:mt-[20px]">
+                    <a href="#"
+                        class="flex flex-row w-full p-[10px] gap-4 items-center hover:bg-[#CDCDCD] cursor-pointer">
+                        <img src="assets/Icons/Email.svg" alt="E-mail" class="h-8 w-8 desktop:h-12 desktop:w-12" />
+                        <div class="flex flex-col text-[#545454]">
+                            <h6 class="text-[13px] font-medium desktop:text-[15px]">
+                                E-mail
+                            </h6>
+                            <h6 class="text-[13px] font-medium desktop:text-[15px]">
+                                rean2learn.service@gmail.com
+                            </h6>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="flex flex-row w-full p-[10px] gap-4 items-center hover:bg-[#CDCDCD] cursor-pointer">
+                        <img src="assets/Icons/phone.svg" alt="E-mail" class="h-8 w-8 desktop:h-12 desktop:w-12" />
+                        <div class="flex flex-col text-[#545454]">
+                            <h6 class="text-[13px] font-medium desktop:text-[15px]">
+                                Phone Number
+                            </h6>
+                            <h6 class="text-[13px] font-medium desktop:text-[15px]">
+                                (+855) 67 168 169
+                            </h6>
+                        </div>
+                    </a>
                 </div>
-                <!-- Form -->
-                <form class="shadow-[0_4px_16px_rgba(0,0,0,0.08)] mt-[30px] h-[450px] w-[85%] desktop:h-[60%] desktop:w-[75%] px-[50px] bg-white flex flex-col justify-center justify-self-center gap-2 rounded-[20px]">
-                    <h6 class="font-medium text-[25px] desktop:text-mobileL flex self-start">Contact Us</h6>
-                    <label class="w-full rounded-[12px]">
-                        <h6>Name</h6>
-                        <input type="text" placeholder="Enter your name" class="text-[14px] w-full bg-lightgrey px-[10px] py-[8px]">
-                    </label>
-                    <label class="w-full rounded-[12px]">
-                        <h6>E-mail</h6>
-                        <input type="text" placeholder="Enter your name" class="text-[14px] w-full bg-lightgrey px-[10px] py-[8px]">
-                    </label>
-                    <label class="w-full rounded-[12px]">
-                        <h6>Message</h6>
-                        <textarea placeholder="Write a message" class="text-[14px] max-h-[120px] w-full bg-lightgrey px-[10px] py-[8px]"></textarea>
-                    </label>
-                    <button class="bg-buttonColor px-[10px] py-[8px] desktop:px-[10px] desktop:py-[10px] text-white text-[15px] w-[150px] desktop:text-[18px] desktop:w-[180px] rounded-[12px]">Send a Message</button>
-                </form>
-            </section>
-        </main>
+            </div>
+            <!-- Form -->
+            <form
+                class="shadow-[0_4px_16px_rgba(0,0,0,0.08)] mt-[30px] h-[450px] w-[85%] desktop:h-[60%] desktop:w-[75%] px-[50px] bg-white flex flex-col justify-center justify-self-center gap-2 rounded-[20px]">
+                <h6 class="font-medium text-[25px] desktop:text-mobileL flex self-start">
+                    Contact Us
+                </h6>
+                <label class="w-full rounded-[12px]">
+                    <h6>Name</h6>
+                    <input type="text" placeholder="Enter your name"
+                        class="text-[14px] w-full bg-lightgrey px-[10px] py-[8px]" />
+                </label>
+                <label class="w-full rounded-[12px]">
+                    <h6>E-mail</h6>
+                    <input type="text" placeholder="Enter your name"
+                        class="text-[14px] w-full bg-lightgrey px-[10px] py-[8px]" />
+                </label>
+                <label class="w-full rounded-[12px]">
+                    <h6>Message</h6>
+                    <textarea placeholder="Write a message"
+                        class="text-[14px] max-h-[120px] w-full bg-lightgrey px-[10px] py-[8px]"></textarea>
+                </label>
+                <button
+                    class="bg-buttonColor px-[10px] py-[8px] desktop:px-[10px] desktop:py-[10px] text-white text-[15px] w-[150px] desktop:text-[18px] desktop:w-[180px] rounded-[12px]">
+                    Send a Message
+                </button>
+            </form>
+        </section>
+    </main>
     <!-- Footer -->
-    <footer class="grid grid-cols-2 grid-rows-2 h-[300px] tablet:h-[250px] desktop:h-[220px] w-full px-[30px] desktop:px-[60px] mt-[20px] desktop:grid-cols-4">
+    <footer
+        class="grid grid-cols-2 grid-rows-2 h-[300px] tablet:h-[250px] desktop:h-[220px] w-full px-[30px] desktop:px-[60px] mt-[20px] desktop:grid-cols-4">
         <div class="flex flex-col px-[20px]">
             <div class="flex flex-row gap-2">
-                <img src="assets/img/Rean2LearnLogo.png" alt="Logo" class="h-6 w-6">
-                <h6 class="font-semibold ">Rean2Learn</h6>
+                <img src="assets/img/Rean2LearnLogo.png" alt="Logo" class="h-6 w-6" />
+                <h6 class="font-semibold">Rean2Learn</h6>
             </div>
-            <h6 class="text-darkgrey text-[13px] desktop:text-[15px]">Lorem Ipsum is simply dummy text of the printing</h6>
+            <h6 class="text-darkgrey text-[13px] desktop:text-[15px]">
+                Lorem Ipsum is simply dummy text of the printing
+            </h6>
             <!-- social -->
             <div class="flex flex-row gap-2 items-center mt-[8px]">
-                <img src="assets/Icons/Social/Facebook.svg" alt="Facebook" class="h-6 w-6">
-                <img src="assets/Icons/Social/Linkedin.svg" alt="LinkedIn" class="h-6 w-6">
-                <img src="assets/Icons/Social/X.svg" alt="X" class="h-5 w-5">
-                <img src="assets/Icons/Social/Youtube.svg" alt="Youtube" class="h-6 w-6">
+                <img src="assets/Icons/Social/Facebook.svg" alt="Facebook" class="h-6 w-6" />
+                <img src="assets/Icons/Social/Linkedin.svg" alt="LinkedIn" class="h-6 w-6" />
+                <img src="assets/Icons/Social/X.svg" alt="X" class="h-5 w-5" />
+                <img src="assets/Icons/Social/Youtube.svg" alt="Youtube" class="h-6 w-6" />
             </div>
-            <h6 class="font-medium text-[13px] text-darkgrey desktop:text-[15px]">2025 All Rights Reserved</h6>
+            <h6 class="font-medium text-[13px] text-darkgrey desktop:text-[15px]">
+                2025 All Rights Reserved
+            </h6>
         </div>
         <!-- Column2 -->
         <div class="flex flex-col px-[20px]">
-            <ul class="text-[13px] space-y-1 desktop:text-[15px]"> 
+            <ul class="text-[13px] space-y-1 desktop:text-[15px]">
                 <h6 class="font-semibold">Project</h6>
-                <li><a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">About Us</a></li>
-                <li><a href="#"class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Milestone</a></li>
+                <li>
+                    <a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">About Us</a>
+                </li>
+                <li>
+                    <a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Milestone</a>
+                </li>
             </ul>
-        </div>  
+        </div>
         <!-- Column3 -->
         <div class="flex flex-col px-[20px]">
-            <ul class="text-[13px] desktop:text-[15px]"> 
+            <ul class="text-[13px] desktop:text-[15px]">
                 <h6 class="font-semibold">Resource</h6>
-                <li><a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Tutorial</a></li>
-                <li><a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Blog</a></li>
-                <li><a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Community</a></li>
-                <li><a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Help Centre</a></li>
+                <li>
+                    <a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Tutorial</a>
+                </li>
+                <li>
+                    <a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Blog</a>
+                </li>
+                <li>
+                    <a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Community</a>
+                </li>
+                <li>
+                    <a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">Help
+                        Centre</a>
+                </li>
             </ul>
         </div>
         <!-- Column4 -->
         <div class="flex flex-col px-[20px]">
-            <ul class="text-[13px] desktop:text-[15px]"> 
+            <ul class="text-[13px] desktop:text-[15px]">
                 <h6 class="font-semibold">Contact</h6>
-                <li><a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">support@rean2learn.com</a></li>
-                <li><a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">(+855) 67 168 169</a></li>
+                <li>
+                    <a href="#"
+                        class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">support@rean2learn.com</a>
+                </li>
+                <li>
+                    <a href="#" class="text-darkgrey border-b-2 border-transparent hover:border-blue-500">(+855) 67 168
+                        169</a>
+                </li>
             </ul>
         </div>
     </footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>
