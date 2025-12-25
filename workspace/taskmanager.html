@@ -104,50 +104,49 @@
   <!-- MAIN Container -->
   <div class="flex">
     <!-- Sidebar -->
-    <aside id="sidebar"
-      class="fixed top-0 left-0 h-screen w-[268px] bg-white border-r z-[2500] transform transition-transform duration-300 hidden lg:block">
-      <section class="py-[30px] px-[10px]">
-        <div class="flex gap-3">
-          <img src="../assets/img/Rean2LearnLogo.png" class="w-8 h-8" />
-          <h4 class="font-bold self-center">Rean2Learn</h4>
-        </div>
-      </section>
-      <h4 class="px-[8px]">Main Menu</h4>
-      <section class="flex flex-col">
-        <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
-          <img src="../assets/Icons/dashboard.svg" />
-          <h4>Dashboard</h4>
-        </div>
-        <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
-          <img src="../assets/Icons/Task2.svg" />
-          <h4>Task Management</h4>
-        </div>
-        <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
-          <img src="../assets/Icons/FocusArea.svg" />
-          <h4>Focus Area</h4>
-        </div>
-      </section>
-      <h4 class="px-[8px]">Mini Menu</h4>
-      <section class="flex flex-col">
-        <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
-          <img src="../assets/Icons/music2.svg" />
-          <h4>Music</h4>
-        </div>
-        <div class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2">
-          <img src="../assets/Icons/game.svg" />
-          <h4>Game</h4>
-        </div>
-      </section>
-      <section class="mt-auto px-[25px]">
-        <div class="flex py-[8px] hover:bg-lightgrey cursor-pointer gap-2">
-          <img src="../assets/Icons/setting.svg" />
-          <h4>Setting</h4>
-        </div>
-      </section>
-    </aside>
-
+           <aside id="sidebar"
+            class="fixed top-0 left-0 h-screen w-[230px] bg-white border-r z-[2500] transform transition-transform duration-300 hidden lg:block">
+            <section class="py-[30px] px-[10px]">
+                <div class="flex gap-3">
+                    <img src="../assets/img/Rean2LearnLogo.png" class="w-8 h-8" />
+                    <h4 class="font-bold self-center">Rean2Learn</h4>
+                </div>
+            </section>
+            <h4 class="px-[8px]">Main Menu</h4>
+            <section class="flex flex-col">
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="dashboard.html">
+                    <img src="../assets/Icons/dashboard.svg" />
+                    <h4>Dashboard</h4>
+                </a>
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="taskmanager.html">
+                    <img src="../assets/Icons/Task2.svg" />
+                    <h4>Task Management</h4>
+                </a>
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="focus.html">
+                    <img src="../assets/Icons/FocusArea.svg" />
+                    <h4>Focus Area</h4>
+                </a>
+            </section>
+            <h4 class="px-[8px]">Mini Menu</h4>
+            <section class="flex flex-col">
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="music.html">
+                    <img src="../assets/Icons/music2.svg" />
+                    <h4>Music</h4>
+                </a>
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="game.html">
+                    <img src="../assets/Icons/game.svg" />
+                    <h4>Game</h4>
+                </a>
+            </section>
+            <section class="mt-auto px-[25px]">
+                <a class="flex py-[8px] hover:bg-lightgrey cursor-pointer gap-2" href="setting.html">
+                    <img src="../assets/Icons/setting.svg" />
+                    <h4>Setting</h4>
+                </a>
+            </section>
+        </aside>
     <!-- Main Content -->
-    <main class="w-full lg:ml-[268px] bg-[#FDFDFD] lg:px-[50px] lg:py-[20px] px-[30px] py-[30px]">
+    <main class="w-full lg:ml-[230px] bg-[#FDFDFD] lg:px-[50px] lg:py-[20px] px-[30px] py-[30px]">
       <!-- TOP -->
       <section class="flex flex-row justify-between py-[10px]">
         <img id="menu" src="../assets/Icons/HamburgerBlack.svg" alt="Menu" class="lg:hidden cursor-pointer" />

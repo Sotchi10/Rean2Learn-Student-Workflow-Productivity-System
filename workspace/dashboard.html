@@ -1,14 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rean2Learn - Dashboard</title>
-    <link rel="stylesheet" href="assets/js/task.js">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/Rean2LearnLogo.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/img/Rean2LearnLogo.png" />
+    <title>Rean2Learn | Task Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        /* Global */
+        --color-buttonColor: #0066ff;
+        /* Mobile */
+        --breakpoint-mobile: 475px;
+        --breakpoint-md: 628px;
+        --breakpoint-lg: 1024px;
+        /* text-size */
+        --text-mobileL: 35px;
+        --text-mobileSL: 22px;
+        --text-mobileM: 18px;
+        --text-mobileMS: 20px;
+        --text-mobileS: 15px;
+
+        /* text-color */
+        --color-grey: #cdcdcd;
+        --color-darkgrey: #545454;
+        --color-lightgrey: #f2f2f2;
+
+        /* Padding */
+        --spacing-mobilePadx: 15px;
+        --spacing-mobilePady: 5px;
+      }
+    </style>
 </head>
+
 <body>
-    
+    <!-- Pop Up -->
+    <div id="popupModal"
+        class="hidden w-full h-full bg-[rgba(0,0,0,0.5)] fixed z-[3000] right-0 left-0 right-0 flex justify-center items-center">
+        <!-- Part1 -->
+        <div id="part1" class="hidden bg-white p-6 rounded-lg w-full h-[80%] md:w-[80%] lg:w-[45%] px-[50px] py-[50px]">
+            <h2 class="text-xl font-bold mb-4">Add New Task</h2>
+            <form id="subForm" class="flex flex-col gap-3">
+                <input type="text" id="subTitle" placeholder="Subject Title" class="border p-2 rounded" />
+                <textarea id="subDesc" placeholder="Short Description" class="border p-2 rounded"></textarea>
+                <!-- Subject Image Upload -->
+                <div>
+                    <p class="text-sm font-medium mb-1">Subject Image</p>
+                    <label for="subImage"
+                        class="flex flex-col items-center justify-center w-full h-[160px] border-2 border-solid border-gray-300 rounded-xl cursor-pointer hover:border-blue-500 transition">
+                        <!-- Icon -->
+                        <svg class="w-10 h-10 text-gray-400 mb-2" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 16v-8m0 0l-3 3m3-3l3 3M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                        </svg>
+                        <!-- Text -->
+                        <p class="text-gray-500 text-sm">Click to upload image</p>
+                    </label>
+                    <!-- Hidden real input -->
+                    <input type="file" id="subImage" accept="image/*" class="hidden" />
+                </div>
+                <!-- Button -->
+                <div class="flex justify-end gap-2 fixed bottom-30 lg:right-[30%] md:right-[15%]">
+                    <button id="cancelBtn" type="button" class="px-3 py-1 border rounded cursor-pointer">
+                        Cancel
+                    </button>
+                    <button id="nextBtn" type="submit" class="px-3 py-1 bg-blue-600 text-white rounded cursor-pointer">
+                        Next
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- Part2 -->
+        <div id="part2" class="hidden bg-white p-6 rounded-lg w-full h-[80%] md:w-[80%] lg:w-[45%] px-[50px] py-[50px]">
+            <h2 class="text-xl font-bold mb-4">Add New Task</h2>
+            <form id="taskForm" class="flex flex-row gap-3">
+                <input type="text" id="taskTitle" placeholder="Task to do" class="border p-2 rounded flex flex-1" />
+                <button id="addTaskBtn" type="submit" class="px-8 py-1 bg-blue-600 text-white rounded cursor-pointer">
+                    Add
+                </button>
+            </form>
+            <!-- Show Task -->
+            <div id="taskContainer" class="flex w-full flex-col mt-3">
+                <div id="taskPlace" class="w-full flex flex-row hover:bg-lightgrey cursor-pointer">
+                    <!-- Adding tasks here -->
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="flex justify-end gap-2 fixed bottom-30 lg:right-[30%] md:right-[15%]">
+                <button id="backBtn" type="button" id="closeModal" class="px-3 py-1 border rounded cursor-pointer">
+                    Back
+                </button>
+                <button id="doneBtn" type="submit" class="px-3 py-1 bg-blue-600 text-white rounded cursor-pointer">
+                    Done
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------ MAIN Container ----------------------------------------->
+    <div class="flex">
+        <!--------------- Sidebar ----------------->
+        <aside id="sidebar"
+            class="fixed top-0 left-0 h-screen w-[230px] bg-white border-r z-[2500] transform transition-transform duration-300 hidden lg:block">
+            <section class="py-[30px] px-[10px]">
+                <div class="flex gap-3">
+                    <img src="../assets/img/Rean2LearnLogo.png" class="w-8 h-8" />
+                    <h4 class="font-bold self-center">Rean2Learn</h4>
+                </div>
+            </section>
+            <h4 class="px-[8px]">Main Menu</h4>
+            <section class="flex flex-col">
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="dashboard.html">
+                    <img src="../assets/Icons/dashboard.svg" />
+                    <h4>Dashboard</h4>
+                </a>
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="taskmanager.html">
+                    <img src="../assets/Icons/Task2.svg" />
+                    <h4>Task Management</h4>
+                </a>
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="focus.html">
+                    <img src="../assets/Icons/FocusArea.svg" />
+                    <h4>Focus Area</h4>
+                </a>
+            </section>
+            <h4 class="px-[8px]">Mini Menu</h4>
+            <section class="flex flex-col">
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="music.html">
+                    <img src="../assets/Icons/music2.svg" />
+                    <h4>Music</h4>
+                </a>
+                <a class="flex py-[8px] px-[25px] hover:bg-lightgrey cursor-pointer gap-2" href="game.html">
+                    <img src="../assets/Icons/game.svg" />
+                    <h4>Game</h4>
+                </a>
+            </section>
+            <section class="mt-auto px-[25px]">
+                <a class="flex py-[8px] hover:bg-lightgrey cursor-pointer gap-2" href="setting.html">
+                    <img src="../assets/Icons/setting.svg" />
+                    <h4>Setting</h4>
+                </a>
+            </section>
+        </aside>
+
+        <!--------------- Main Content ------------------>
+        <main class="w-full lg:ml-[230px] bg-[#FDFDFD] lg:px-[50px] lg:py-[20px] px-[30px] py-[30px] lg:mr-[380px]">
+            <!-- Welcome User -->
+            <section class="w-full flex flex-col">
+                <h1 class="text-[25px] font-semibold">Welcome Back, User</h1>
+                <p class="text-darkgrey">It's not too late to start over!</p>
+            </section>
+            <!-- hero -->
+            <section
+                class="hidden md:flex lg:flex lg:flex-row bg-white px-[50px] rounded-[8px] mt-6 shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)]">
+                <div class="flex flex-col w-[70%] self-center justify-center mr-8">
+                    <img src="../assets/Icons/Task.svg" alt="" class="w-6 h-6" />
+                    <h4 class="font-bold">Organize yourself and become unrecognizable</h4>
+                    <h6 class="text-darkgrey">
+                        Break your workload into small, manageable actions and keep every
+                        task organized in one simple dashboard designed to reduce stress
+                        and boost productivity.
+                    </h6>
+                </div>
+                <img src="../assets/img/TaskManagement IMG.jpg" alt="" class="w-full md:w-[30%] lg:w-[26%] h-[230px]" />
+            </section>
+            <!-- Overall tasks -->
+            <section class="flex flex-row w-full mt-4 justify-between">
+                <div
+                    class="flex flex-row h-[80px] w-[30%] rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] items-center p-6">
+                    <img src="../assets/Icons/subject.svg" alt="subject" class="h-12 w-12" />
+                    <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
+                        <h6 class="text-darkgrey">Total Subject</h6>
+                        <h6>0</h6>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-row h-[80px] w-[30%] rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] items-center p-6">
+                    <img src="../assets/Icons/task2.svg" alt="subject" class="h-12 w-12" />
+                    <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
+                        <h6 class="text-darkgrey">Total Tasks</h6>
+                        <h6>0</h6>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-row h-[80px] w-[30%] rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] items-center p-6">
+                    <img src="../assets/Icons/progress.svg" alt="subject" class="h-12 w-12" />
+                    <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
+                        <h6 class="text-darkgrey">Progress</h6>
+                        <h6 class="text-blue-600">NULL</h6>
+                    </div>
+                </div>
+            </section>
+            <!------ Overview--- -->
+            <section class="w-full shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] h-[800px] mt-5 p-10">
+                <div
+                    class="w-full flex flex-row justify-start items-center shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] p-8 rounded-[20px]">
+                    <img src="../assets/img/CSS.jpg" alt="" class="w-25 h-25">
+                    <div class="flex flex-col ml-6">
+                        <h4 class="font-medium">Web Design</h4>
+                        <p class="text-[15px] text-darkgrey">Rean2Learn is a project blah blah blah</p>
+                        <a href="taskmanager.html" class="text-blue-600">Manage task here</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!----------------- Right Side ------------------>
+        <aside id="sidebar"
+            class="fixed overflow-y top-0 right-0 h-screen w-[380px] border-r z-[2500] transform transition-transform duration-300 hidden lg:block p-8">
+            <!-- user profile  -->
+            <div>
+                <!-- top -->
+                <div class="flex justify-between">
+                    <h5>My Profile</h5>
+                    <h5>DarkMode</h5>
+                </div>
+                <form class="flex flex-col justify-center items-center mt-8">
+                    <img src="../assets/img/CSS.jpg" alt="pfp" class="rounded-[100%] w-30 h-30 cursor-pointer">
+                    <div class="text-center m-2">
+                        <h5 class="font-semibold">Cristiano R</h5>
+                        <h5 class="text-darkgrey text-[14px] font-regular">Footballer</h5>
+                    </div>
+                </form>
+            </div>  
+            
+        </aside>
+    </div>
+    <script src="../js/task.js"></script>
 </body>
+
 </html>
