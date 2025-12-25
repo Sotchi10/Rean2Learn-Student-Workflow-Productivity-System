@@ -12,3 +12,9 @@ menu.addEventListener("click", () => {
     sidebar.classList.toggle("-translate-x-full");
 });
 
+
+
+
+
+
+

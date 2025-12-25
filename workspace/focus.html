@@ -151,55 +151,100 @@
             <section
                 class="hidden md:flex lg:flex lg:flex-row bg-white px-[50px] rounded-[8px] mt-6 shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)]">
                 <div class="flex flex-col w-[70%] self-center justify-center mr-8">
-                    <img src="../assets/Icons/Task.svg" alt="" class="w-6 h-6" />
-                    <h4 class="font-bold">Organize yourself and become unrecognizable</h4>
+                    <img src="../assets/Icons/FocusArea.svg" alt="" class="w-6 h-6" />
+                    <h4 class="font-bold">Focus on what matters most</h4>
                     <h6 class="text-darkgrey">
-                        Break your workload into small, manageable actions and keep every
-                        task organized in one simple dashboard designed to reduce stress
-                        and boost productivity.
+                        Create distraction-free zones for deep work. Concentrate on your priorities and boost productivity with minimal effort.
                     </h6>
                 </div>
                 <img src="../assets/img/TaskManagement IMG.jpg" alt="" class="w-full md:w-[30%] lg:w-[26%] h-[230px]" />
             </section>
             <!-- Method Selection -->
-            <section class="flex flex-row w-full mt-4 justify-between">
-                <div
-                    class="flex flex-row h-[80px] w-[30%] rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] items-center p-6">
-                    <img src="../assets/Icons/subject.svg" alt="subject" class="h-12 w-12" />
-                    <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
-                        <h6 class="text-darkgrey">Total Subject</h6>
-                        <h6>0</h6>
+            <!-- Method Selection -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+
+
+                <!-- Amount of break -->
+                <div class="p-6 rounded-2xl shadow bg-white flex flex-col gap-3">
+                    <p class="text-sm text-gray-500">Amount of break</p>
+                    <p id="breakCount" class="text-2xl font-semibold">0</p>
+                    <div class="flex gap-3">
+                        <button id="breakMinus" class="px-3 py-1 border rounded">-</button>
+                        <button id="breakPlus" class="px-3 py-1 border rounded">+</button>
                     </div>
                 </div>
-                <div
-                    class="flex flex-row h-[80px] w-[30%] rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] items-center p-6">
-                    <img src="../assets/Icons/task2.svg" alt="subject" class="h-12 w-12" />
-                    <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
-                        <h6 class="text-darkgrey">Total Tasks</h6>
-                        <h6>0</h6>
+
+                <!-- Break duration -->
+                <div class="p-6 rounded-2xl shadow bg-white flex flex-col gap-3">
+                    <p class="text-sm text-gray-500">Break duration (min)</p>
+                    <p id="breakDuration" class="text-2xl font-semibold">5</p>
+                    <div class="flex gap-3">
+                        <button id="durationMinus" class="px-3 py-1 border rounded">-</button>
+                        <button id="durationPlus" class="px-3 py-1 border rounded">+</button>
                     </div>
                 </div>
-                <div
-                    class="flex flex-row h-[80px] w-[30%] rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] items-center p-6">
-                    <img src="../assets/Icons/progress.svg" alt="subject" class="h-12 w-12" />
-                    <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
-                        <h6 class="text-darkgrey">Progress</h6>
-                        <h6 class="text-blue-600">NULL</h6>
+
+                <!-- Status -->
+                <div class="p-6 rounded-2xl shadow bg-white flex flex-col gap-3">
+                    <p class="text-sm text-gray-500">Status</p>
+                    <p id="statusText" class="text-blue-600 font-semibold">Ready</p>
+                </div>
+
+            </section>
+
+            <!-- Timer -->
+            <section class="flex flex-col gap-8 p-10 mt-6 rounded-2xl shadow bg-white">
+
+                <!-- Time Setter -->
+                <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+
+                    <input id="hourInput" type="number" min="0" max="23" value="2"
+                        class="w-20 border rounded px-2 py-1" />
+
+                    <span>:</span>
+
+                    <input id="minuteInput" type="number" min="0" max="59" value="30"
+                        class="w-20 border rounded px-2 py-1" />
+
+                    <button id="setTimeBtn" class="px-4 py-1 bg-blue-600 text-white rounded">
+                        Set Time
+                    </button>
+                </div>
+
+                <!-- Clock + Timer -->
+                <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+
+
+                    <img src="../assets/Icons/clock.svg"
+                        class="w-[140px] h-[140px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px]" />
+
+                    <div class="flex flex-col items-center gap-6">
+                        <h1 id="timerDisplay" class="font-mono text-[36px] md:text-[44px] lg:text-[52px] font-semibold">
+                            02:30:00
+                        </h1>
+
+                        <div class="flex gap-6">
+                            <button id="timerCancel" class="text-gray-500">
+                                Cancel
+                            </button>
+                            <button id="startBtn" class="font-semibold text-blue-600">
+                                Start
+                            </button>
+                            <button id="pauseBtn" class="font-semibold hidden">
+                                Pause
+                            </button>
+                            <button id="resetBtn" class="font-semibold hidden">
+                                Reset
+                            </button>
+                        </div>
                     </div>
+
                 </div>
             </section>
-            <!------ Timer--- -->
-            <section class="flex flex-row w-full shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] mt-5 p-10">
-                <!-- Timer runner -->
-                <img src="../assets/Icons/clock.svg" alt="" class="w-[250px] h-[250px]">
-                <div class="flex flex-col justify-center items-center ml-20">
-                    <h5 class="text-[60px] font-medium">2h:30mn:00s</h5>
-                    <div class="flex flex-row w-full justify-end gap-8">
-                        <button>Cancel</button>
-                        <button>Pause</button>
-                    </div>
-                </div>
-            </section>
+
+
+
+
         </main>
         <!----------------- Right Side ------------------>
         <aside id="sidebar"
@@ -207,7 +252,6 @@
             <!------ Quiz and Quote  -->
             <!-- Quiz -->
             <div class="p-10 mt-5 h-[55%] w-full rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)]">
-                <h5 class="font-medium">Quiz</h5>
                 <div class="mt-5">
                     <h5>1. What is the brain of a computer?</h5>
                     <ul class="mt-4 gap-10 w-full">
@@ -215,25 +259,37 @@
                             <img src="../assets/Icons/check.svg" alt="">
                             Keyboard
                         </li>
-                        
+                        <li class="flex flex-row gap-2 hover:bg-lightgrey p-2 cursor-pointer">
+                            <img src="../assets/Icons/check.svg" alt="">
+                            Keyboard
+                        </li>
+                        <li class="flex flex-row gap-2 hover:bg-lightgrey p-2 cursor-pointer">
+                            <img src="../assets/Icons/check.svg" alt="">
+                            Keyboard
+                        </li>
+                        <li class="flex flex-row gap-2 hover:bg-lightgrey p-2 cursor-pointer">
+                            <img src="../assets/Icons/check.svg" alt="">
+                            Keyboard
+                        </li>
                     </ul>
                 </div>
                 <div class="flex flex-row justify-self-end gap-8 mt-8">
                     <button class="cursor-pointer">Back</button>
                     <button class="cursor-pointer bg-blue-600 px-[15px] py-[4px] text-white">Next</button>
                 </div>
-            </div>  
+            </div>
             <!-- Quote Generator -->
-            <div class="mt-10 h-[35%] w-full     rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] p-8 flex flex-col justify-center items-center">
+            <div
+                class="mt-10 h-[35%] w-full     rounded-[20px] shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] p-8 flex flex-col justify-center items-center">
                 <h5 class="text-center"><em>"You have to dream before your dreams can come true."</em></h5>
                 <h5>A. P. J. Abdul Kalam</h5>
-                
-            </div>  
-                
-            
+
+            </div>
+
+
         </aside>
     </div>
-    <script src="../js/task.js"></script>
+    <script src="../js/timer.js"></script>
 </body>
 
 </html>

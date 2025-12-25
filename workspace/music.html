@@ -155,7 +155,7 @@
                 <!-- Display -->
                 <div
                     class="relative z-10 flex flex-row items-center gap-5 text-white transition-opacity duration-300 opacity-100">
-                    <img src="/assets/cover.jpg" alt="" class="disImg h-[200px] w-[200px] rounded-lg shadow-lg" />
+                    <img src="../assets/img/Music/disc.jpg" alt="" class="disImg h-[200px] w-[200px] rounded-lg shadow-lg" />
                     <div>
                         <h5 class="title text-[55px] font-semibold leading-tight">Welcome to music section</h5>
                         <h5 class="artistName text-lg opacity-90">You may listen to our built-in playlist</h5>
@@ -165,10 +165,15 @@
             <audio id="audioPlayer"></audio>
             <!-- Music Container -->
             <div class="w-full  flex flex-row">
-                <div class="flex justify-center items-center w-[30%] h-[340px] bg-blue-200">
-                    <button onclick="togglePlay()" class="mt-3 px-4 py-2 bg-blue-600 cursor-pointer rounded text-white">
-                        Play
-                    </button>
+               <div class="flex justify-center items-center w-[27%] h-[350px] bg-gray-300 rounded-3xl p-6 shadow-md mt-6">
+                    <button
+                    id="playPauseBtn"
+                    onclick="togglePlay()"
+                    class="mt-3 px-4 py-2 bg-blue-600 cursor-pointer rounded text-white"
+                >
+                Play Song 
+            </button>
+
                 </div>
                 <div class="w-[70%]">
                     <!-- Headline  -->
@@ -198,7 +203,48 @@
                             <h5>2:00:04</h5>
                         </div>
                     </div>
-                   
+                    <div id="song-1"
+                        class="song-row w-full flex flex-row justify-between cursor-pointer hover:bg-lightgrey mt-4"
+                        onclick="playSong(1)">
+                        <div class="w-[50%] flex flex-row items-center gap-3 p-3">
+                            <img src="../assets/img/Music/image copy.png" alt="" class="w-10 h-10" />
+                            <h5>Focus Soundtrack2</h5>
+                        </div>
+                        <div class="w-[28%] flex flex-row items-center gap-3">
+                            <h5>Cigarettes After Sex</h5>
+                        </div>
+                        <div class="w-[10%] flex flex-row items-center gap-3">
+                            <h5>00:46:42</h5>
+                        </div>
+                    </div>
+                    <div id="song-2"
+                        class="song-row w-full flex flex-row justify-between cursor-pointer hover:bg-lightgrey mt-4"
+                        onclick="playSong(2)">
+                        <div class="w-[50%] flex flex-row items-center gap-3 p-3">
+                            <img src="../assets/img/Music/Screenshot 2025-12-25 233130.png" alt="" class="w-10 h-10" />
+                            <h5>Focus Soundtrack3</h5>
+                        </div>
+                        <div class="w-[28%] flex flex-row items-center gap-3">
+                            <h5>Ed Sheeran</h5>
+                        </div>
+                        <div class="w-[10%] flex flex-row items-center gap-3">
+                            <h5>00:35:54</h5>
+                        </div>
+                    </div>
+                   <div id="song-3"
+                        class="song-row w-full flex flex-row justify-between cursor-pointer hover:bg-lightgrey mt-4"
+                        onclick="playSong(3)">
+                        <div class="w-[50%] flex flex-row items-center gap-3 p-3">
+                            <img src="../assets/img/Music/image.png" alt="" class="w-10 h-10" />
+                            <h5>Focus Soundtrack4</h5>
+                        </div>
+                        <div class="w-[28%] flex flex-row items-center gap-3">
+                            <h5>Relaxing Zen Music</h5>
+                        </div>
+                        <div class="w-[10%] flex flex-row items-center gap-3">
+                            <h5>00:15:00</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

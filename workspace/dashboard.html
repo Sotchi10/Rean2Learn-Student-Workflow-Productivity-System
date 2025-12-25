@@ -159,9 +159,7 @@
                     <img src="../assets/Icons/Task.svg" alt="" class="w-6 h-6" />
                     <h4 class="font-bold">Organize yourself and become unrecognizable</h4>
                     <h6 class="text-darkgrey">
-                        Break your workload into small, manageable actions and keep every
-                        task organized in one simple dashboard designed to reduce stress
-                        and boost productivity.
+                        Get a quick overview of all your subjects, tasks, and progress. Track your achievements and plan ahead efficiently.
                     </h6>
                 </div>
                 <img src="../assets/img/TaskManagement IMG.jpg" alt="" class="w-full md:w-[30%] lg:w-[26%] h-[230px]" />
@@ -173,7 +171,7 @@
                     <img src="../assets/Icons/subject.svg" alt="subject" class="h-12 w-12" />
                     <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
                         <h6 class="text-darkgrey">Total Subject</h6>
-                        <h6>0</h6>
+                        <h6 id="totalSubjects">0</h6>
                     </div>
                 </div>
                 <div
@@ -181,7 +179,7 @@
                     <img src="../assets/Icons/task2.svg" alt="subject" class="h-12 w-12" />
                     <div class="ml-5 flex flex-col font-medium w-full justify-self-center">
                         <h6 class="text-darkgrey">Total Tasks</h6>
-                        <h6>0</h6>
+                        <h6 id="totalTasks">0</h6>
                     </div>
                 </div>
                 <div
@@ -193,22 +191,15 @@
                     </div>
                 </div>
             </section>
+
             <!------ Overview--- -->
-            <section class="w-full shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] h-[800px] mt-5 p-10">
-                <div
-                    class="w-full flex flex-row justify-start items-center shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] p-8 rounded-[20px]">
-                    <img src="../assets/img/CSS.jpg" alt="" class="w-25 h-25">
-                    <div class="flex flex-col ml-6">
-                        <h4 class="font-medium">Web Design</h4>
-                        <p class="text-[15px] text-darkgrey">Rean2Learn is a project blah blah blah</p>
-                        <a href="taskmanager.html" class="text-blue-600">Manage task here</a>
-                    </div>
-                </div>
+            <section id="subjectsDis" class="w-full shadow-[2px_2px_30px_-10px_rgba(0,0,0,0.2)] mt-5 p-10">
+
             </section>
         </main>
         <!----------------- Right Side ------------------>
         <aside id="sidebar"
-            class="fixed overflow-y top-0 right-0 h-screen w-[380px] border-r z-[2500] transform transition-transform duration-300 hidden lg:block p-8">
+            class="fixed overflow-y top-0 right-0 h-screen w-[380px] border-r z-[2500] transform transition-transform duration-300 lg:block p-8">
             <!-- user profile  -->
             <div>
                 <!-- top -->
@@ -223,11 +214,11 @@
                         <h5 class="text-darkgrey text-[14px] font-regular">Footballer</h5>
                     </div>
                 </form>
-            </div>  
-            
+            </div>
+
         </aside>
     </div>
-    <script src="../js/task.js"></script>
+    <script src="../js/dashboard.js"></script>
 </body>
 
 </html>

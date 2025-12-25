@@ -47,9 +47,9 @@
             <img src="assets/img/Rean2LearnLogo.png" alt="Rean2LearnLogo" class="cursor-pointer" />
         </a>
         <div class="flex flex-row w-[50%] justify-between items-center gap-2">
-            <button class="px-mobilePadx py-mobilePady bg-buttonColor rounded-[8px] text-white ml-auto">
+            <a href="workspace/dashboard.html" class="px-mobilePadx py-mobilePady bg-buttonColor rounded-[8px] text-white ml-auto">
                 Get Started
-            </button>
+            </a>
             <img src="assets/Icons/HamburgerBlack.svg" alt="Hamburger"
                 class="hamburger w-[35px] h-[30px] cursor-pointer" />
         </div>
@@ -61,16 +61,16 @@
                 <a href="#">Rean2Learn</a>
             </li>
             <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
             </li>
             <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
-                <a href="#">Features</a>
+                <a href="#features">Features</a>
             </li>
             <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
-                <a href="#">Explore</a>
+                <a href="#explore">Explore</a>
             </li>
             <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
-                <a href="workspace/taskmanager.html">Workspace</a>
+                <a href="workspace/dashboard.html">Workspace</a>
             </li>
             <li class="flex justify-center items-center p-[5px] hover:bg-lightgrey hover:p-[10px]">
                 <a href="#">Watch a Demo</a>
@@ -91,11 +91,11 @@
         <!-- CENTER-->
         <ul class="flex justify-center gap-6">
             <li><a href="#" class="hover:bg-lightgrey">Rean2Learn</a></li>
-            <li><a href="#" class="hover:bg-lightgrey">Contact</a></li>
-            <li><a href="#" class="hover:bg-lightgrey">Features</a></li>
-            <li><a href="#" class="hover:bg-lightgrey">Explore</a></li>
+            <li><a href="#contact" class="hover:bg-lightgrey">Contact</a></li>
+            <li><a href="#features" class="hover:bg-lightgrey">Features</a></li>
+            <li><a href="#explore" class="hover:bg-lightgrey">Explore</a></li>
             <li>
-                <a href="workspace/taskmanager.html" class="hover:bg-lightgrey">Workspace</a>
+                <a href="workspace/dashboard.html" class="hover:bg-lightgrey">Workspace</a>
             </li>
             <li><a href="#" class="hover:bg-lightgrey">Demo</a></li>
         </ul>
@@ -122,10 +122,10 @@
                     first, make decisions easier, and track your achievements
                 </p>
                 <div class="flex flex-row justify-evenly mt-4 justify-self-center gap-3">
-                    <button
+                    <a href="workspace/dashboard.html"
                         class="bg-buttonColor text-white px-mobilePadx py-mobilePady rounded-lg cursor-pointer desktop:px-[30px] desktop:py-[12px]">
                         Get Started
-                    </button>
+                    </a>
                     <button
                         class="bg-white text-buttonColor px-mobilePadx py-mobilePady rounded-lg border border-buttonColor cursor-pointer desktop:px-[30px] desktop:py-[12px]">
                         Watch a Demo
@@ -135,7 +135,8 @@
         </section>
 
         <!-- Introduce Feature -->
-        <section class="w-full tablet:w-full desktop:w-full mt-[10px]">
+        <section id="features"
+        class="w-full tablet:w-full desktop:w-full mt-[10px]">
             <h2 class="text-mobileSL mt-[50px] font-bold desktop:text-[1.7rem]">
                 Introducing Rean2Learn's Features
             </h2>
@@ -148,13 +149,13 @@
                             <h4 class="text-mobileS text-darkgrey font-semibold">
                                 Task Management
                             </h4>
-                            <img src="assets/Icons/Task.svg" alt="Task Management" />
+                            <img src="assets/Icons/Task.svg" alt="Task Management"/>
                         </div>
                         <h3 class="text-mobileM font-bold mb-[10px]">
                             Add tasks for each Subjects
                         </h3>
                     </div>
-                    <img src="assets/img/Features/Screenshot 2025-12-08 122620.png" alt="" />
+                    <img src="assets/img/Features/Add Task.png" alt="" class="h-[350px]"/>
                 </div>
                 <!-- Feature2 -->
                 <div class="w-full shadow-[0_4px_16px_rgba(0,0,0,0.08)] p-[30px] rounded-[20px]">
@@ -169,7 +170,7 @@
                             Add tasks for each Subjects
                         </h3>
                     </div>
-                    <img src="assets/img/Features/Screenshot 2025-12-08 122620.png" alt="" />
+                    <img src="assets/img/Features/FocusArea.png" alt="" class="h-[350px]"/>
                 </div>
             </div>
             <!-- Feature3 -->
@@ -182,10 +183,10 @@
             <h2 class="text-mobileSL font-bold desktop:text-[1.7rem]">
                 Unique Feature
             </h2>
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-6">
                 <!-- Feature4 -->
-                <div class="flex flex-col mt-[15px] tablet:w-full tablet:h-full tablet:grid tablet:grid-cols-2">
-                    <img src="" alt="" class="h-[260px] w-full" />
+                <div class="flex flex-col mt-[15px] tablet:w-full tablet:h-full tablet:grid tablet:grid-cols-2 ">
+                    <img src="assets/img/Features/Music.png" alt="" class="h-[280px] w-[80%]" />
                     <div class="flex flex-col tablet:justify-self-center desktop:px-[40px]">
                         <div>
                             <img src="assets/Icons/music2.svg" alt=""
@@ -196,6 +197,20 @@
                             Create your perfect study soundtrack. Customize playlists to
                             boost focus, block distractions, and make every study session
                             more productive and enjoyable.
+                        </h6>
+                    </div>
+                </div>
+                <!-- Feature4 -->
+                <div class="flex flex-col mt-[15px] tablet:w-full tablet:h-full tablet:grid tablet:grid-cols-2">
+                    <img src="assets/img/Features/Card Flip.png" alt="" class="h-[280px] w-[80%]" />
+                    <div class="flex flex-col tablet:justify-self-center desktop:px-[40px]">
+                        <div>
+                            <img src="assets/Icons/game.svg" alt=""
+                                class="h-[30px] flex self-start-safe justify-self-start" />
+                            <h5 class="font-semibold text-mobileM">Card Flip</h5>
+                        </div>
+                        <h6>
+                            Stop procastinating, no more indecisive plans and thoughts. Do it instantly
                         </h6>
                     </div>
                 </div>
@@ -211,12 +226,12 @@
                     <img src="assets/Icons/music2.svg" alt=""
                         class="h-[30px] flex self-start-safe justify-self-start" />
                     <h5 class="font-medium text-mobileM desktop:text-[20px]">
-                        Organize your study plan
+                        
+                        Take Control of Your Day
                     </h5>
                 </div>
                 <h6 class="text-start px-[30px] text-darkgrey">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy
+                   Plan, prioritize, and manage your tasks effortlessly ,so nothing falls through the cracks.
                 </h6>
             </div>
             <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
@@ -224,12 +239,11 @@
                     <img src="assets/Icons/music2.svg" alt=""
                         class="h-[30px] flex self-start-safe justify-self-start" />
                     <h5 class="font-medium text-mobileM desktop:text-[20px]">
-                        Organize your study plan
+                        Simplify Your Workflow
                     </h5>
                 </div>
                 <h6 class="text-start px-[30px] text-darkgrey">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum has been the industry's standard dummy
+                    Keep all your subjects, tasks, and notes in one organized dashboard—no more scattered papers or tabs.
                 </h6>
             </div>
             <div class="flex flex-col w-full items-start my-[15px] desktop:px-[50px] desktop:py-[25px]">
@@ -247,7 +261,7 @@
             </div>
         </section>
         <!-- Contact -->
-        <section
+        <section id="contact"
             class="w-full flex flex-col items-center desktop:grid desktop:grid-cols-2 desktop:mb-[60px] desktop:h-[750px]">
             <!-- Info -->
             <div class="flex flex-col justify-center items-center p-[60px]">
@@ -315,7 +329,7 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer
+    <footer id="explore"
         class="grid grid-cols-2 grid-rows-2 h-[300px] tablet:h-[250px] desktop:h-[220px] w-full px-[30px] desktop:px-[60px] mt-[20px] desktop:grid-cols-4">
         <div class="flex flex-col px-[20px]">
             <div class="flex flex-row gap-2">
