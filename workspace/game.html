@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/img/Rean2LearnLogo.png" />
-    <title>Rean2Learn | Task Management</title>
+    <link rel="icon" href="../assets/img/Rean2LearnLogo.png" />
+    <title>Rean2Learn | Flip card</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
@@ -74,12 +74,12 @@
                     <h4>Game</h4>
                 </a>
             </section>
-            <section class="mt-auto px-[25px]">
+            <!-- <section class="mt-auto px-[25px]">
                 <a class="flex py-[8px] hover:bg-lightgrey cursor-pointer gap-2" href="setting.html">
                     <img src="../assets/Icons/setting.svg" />
                     <h4>Setting</h4>
                 </a>
-            </section>
+            </section> -->
         </aside>
 
         <!--------------- Main Content ------------------>
@@ -94,7 +94,7 @@
                         Shuffle the cards and reveal your subjects. Each flip helps you decide what to tackle next and make work fun and stay productive!
                     </h6>
                 </div>
-                <img src="../assets/img/TaskManagement IMG.jpg" alt="" class="w-full md:w-[30%] lg:w-[26%] h-[230px]" />
+                <img src="../assets/img/stress.jpg" alt="" class="w-full md:w-[30%] lg:w-[26%] h-[230px]" />
             </section>
 
             <section
@@ -113,10 +113,10 @@
                    <div class="w-[90%] h-[350px] cursor-pointer bg-gray-800 rounded-[30px]">
 
                    </div>
-                    
                 </div>
+                <button onclick="loadFlipGame()" class="bg-blue-600 px-[8px] py-[6px] text-white rounded-[12px] cursor-pointer bottom-10 right-20 fixed">Shuffle</button>
             </section>
-            <button onclick="loadFlipGame()" class="bg-blue-600 px-[8px] py-[6px] text-white rounded-[12px] cursor-pointer">Shuffle</button>
+            
 
             
         </main>
