@@ -5,7 +5,7 @@ let subjects = JSON.parse(localStorage.getItem("subjects")) || [];
 function getGameSubjects() {
     const gameSubjects = [...subjects];
     while (gameSubjects.length < 4) {
-        gameSubjects.push(null); // placeholder for empty card
+        gameSubjects.push(null); 
     }
     return gameSubjects.slice(0, 4);
 }
