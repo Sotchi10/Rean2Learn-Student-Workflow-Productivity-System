@@ -71,7 +71,7 @@ A centralized workspace where students manage their study flow:
 
 ---
 
-## 4. 🎯 Target Users
+## 4. Target Users
 
 * University students
 * High school students
