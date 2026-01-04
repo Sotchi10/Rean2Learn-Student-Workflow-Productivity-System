@@ -21,13 +21,13 @@ A student-friendly platform. (Non=Complex)
 
 ## 🧩 Core Features
 
-# 🏠 Landing Page
+### 🏠 Landing Page
 
 * Clear introduction to Rean2Learn’s purpose
 * Feature highlights
 * Simple and modern UI for first-time users
 
-# 📊 Student Dashboard
+### 📊 Student Dashboard
 
 A centralized workspace where students manage their study flow:
 
@@ -37,13 +37,13 @@ A centralized workspace where students manage their study flow:
 * **Motivational Quotes** – Daily encouragement to stay consistent
 * **QCM / Quiz Module** – Practice knowledge and self-test
 
-# 🎲 Task-Flipping Game
+### 🎲 Task-Flipping Game
 
 * Helps students decide *what to study next*
 * Reduces decision fatigue
 * Adds a fun, interactive element to productivity
 
-# 📈 Advanced Analytics Dashboard
+### 📈 Advanced Analytics Dashboard
 
 * Visual insights into study time and task completion
 * Helps students understand habits and performance trends
@@ -53,19 +53,19 @@ A centralized workspace where students manage their study flow:
 
 ## 🛠️ Tech Stack
 
-# Frontend
+### Frontend
 
 * **HTML5**
 * **CSS3**
 * **Tailwind CSS**
 * **JavaScript**
 
-# Backend (Future Work)
+### Backend (Future Work)
 
 * Server-side logic for authentication and data persistence
 * RESTful APIs
 
-# Database (Future Work)
+### Database (Future Work)
 
 * Store user data, tasks, quiz progress, and analytics
 
@@ -95,8 +95,7 @@ Contributions, ideas, and feedback are welcome.
 
 ## 👤 Author && Collaborator
 
-**Sotchi**
-**Kimleng**
+**Sotchi** ft. **Kimleng**
 University Student | Beginner Software Engineer
 Project: *Rean2Learn*
 
