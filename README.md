@@ -6,7 +6,7 @@ The goal of Rean2Learn is simple: **help students learn smarter, stay consistent
 
 ---
 
-## 🚀 Vision
+## 1. Vision
 
 Modern students struggle with distractions, poor planning, and a lack of motivation. Rean2Learn aims to solve this by combining:
 
@@ -19,15 +19,15 @@ A student-friendly platform. (Non=Complex)
 
 ---
 
-## 🧩 Core Features
+## 2. Core Features
 
-### 🏠 Landing Page
+### 2.1 Landing Page
 
 * Clear introduction to Rean2Learn’s purpose
 * Feature highlights
 * Simple and modern UI for first-time users
 
-### 📊 Student Dashboard
+### 2.2 Student Dashboard
 
 A centralized workspace where students manage their study flow:
 
@@ -37,13 +37,13 @@ A centralized workspace where students manage their study flow:
 * **Motivational Quotes** – Daily encouragement to stay consistent
 * **QCM / Quiz Module** – Practice knowledge and self-test
 
-### 🎲 Task-Flipping Game
+### 2.3 Task-Flipping Game
 
 * Helps students decide *what to study next*
 * Reduces decision fatigue
 * Adds a fun, interactive element to productivity
 
-### 📈 Advanced Analytics Dashboard
+### 2.4 Advanced Analytics Dashboard
 
 * Visual insights into study time and task completion
 * Helps students understand habits and performance trends
@@ -51,7 +51,7 @@ A centralized workspace where students manage their study flow:
 
 ---
 
-## 🛠️ Tech Stack
+## 3. Tech Stack
 
 ### Frontend
 
@@ -71,7 +71,7 @@ A centralized workspace where students manage their study flow:
 
 ---
 
-## 🎯 Target Users
+## 4. 🎯 Target Users
 
 * University students
 * High school students
@@ -81,7 +81,7 @@ A centralized workspace where students manage their study flow:
 ---
 
 
-## 🤝 Contributing
+## 5. Contributing
 
 Contributions, ideas, and feedback are welcome.
 
@@ -93,7 +93,7 @@ Contributions, ideas, and feedback are welcome.
 ---
 
 
-## 👤 Author && Collaborator
+## 6. Author && Collaborator
 
 **Sotchi** ft. **Kimleng**
 University Student | Beginner Software Engineer
